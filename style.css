@@ -1,5 +1,10 @@
 :root {
-	--blue: #00bfff;
+	--accent: #00bfff;
+	--background1: #111;
+	--background2: #222;
+	--background3: #333;
+	--color1: #fff;
+	--color2: #eee;
 }
 
 * {
@@ -14,8 +19,8 @@
 }
 
 ::selection {
-	background: var(--blue);
-	color: #333;
+	background: var(--accent);
+	color: var(--background3);
 }
 
 html {
@@ -28,17 +33,17 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-	background: #222;
+	background: var(--background2);
 }
 
 html::-webkit-scrollbar-thumb {
-	background: var(--blue);
+	background: var(--accent);
 }
 
 body {
-	background: #111;
+	background: var(--background1);
 	overflow-x: hidden;
-	padding-left: 35rem;
+	padding-right: 35rem;
 }
 
 section {
@@ -48,8 +53,8 @@ section {
 
 .btn {
 	padding: 0.7rem 3rem;
-	background: #333;
-	color: #fff;
+	background: var(--background3);
+	color: var(--color1);
 	cursor: pointer;
 	margin-top: 1rem;
 	font-size: 2rem;
@@ -62,7 +67,7 @@ section {
 }
 
 .btn:hover {
-	background: var(--blue);
+	background: var(--accent);
 }
 
 .heading {
@@ -70,22 +75,22 @@ section {
 	margin: 0 6rem;
 	font-size: 4rem;
 	padding: 1rem;
-	border-bottom: 0.1rem solid #fff4;
-	color: #fff;
+	border-bottom: 0.2rem solid var(--color1);
+	color: var(--color1);
 }
 
 .heading span {
-	color: var(--blue);
+	color: var(--accent);
 }
 
 header {
 	position: fixed;
 	top: 0;
-	left: 0;
+	right: 0;
 	z-index: 1000;
 	height: 100%;
 	width: 35rem;
-	background: #1a1a1a;
+	background: var(--background2);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -99,17 +104,17 @@ header .user img {
 	border-radius: 50%;
 	object-fit: cover;
 	margin-bottom: 1rem;
-	border: 0.7rem solid var(--blue);
+	border: 0.7rem solid var(--accent);
 }
 
 header .user .name {
 	font-size: 3.5rem;
-	color: #fff;
+	color: var(--color1);
 }
 
 header .user .post {
 	font-size: 2rem;
-	color: #eee;
+	color: var(--color2);
 }
 
 header .navbar {
@@ -125,22 +130,22 @@ header .navbar ul li a {
 	display: block;
 	padding: 1rem;
 	margin: 1.5rem 0;
-	background: #333;
-	color: #fff;
+	background: var(--background3);
+	color: var(--color1);
 	font-size: 2rem;
 	border-radius: 5rem;
 }
 
 header .navbar ul li a:hover {
-	background: var(--blue);
+	background: var(--accent);
 }
 
 #menu {
 	position: fixed;
 	top: 2rem;
 	right: 2rem;
-	background: #333;
-	color: #fff;
+	background: var(--background3);
+	color: var(--color1);
 	cursor: pointer;
 	font-size: 2.5rem;
 	padding: 1rem 1.5rem;
@@ -157,21 +162,21 @@ header .navbar ul li a:hover {
 
 .home h3 {
 	font-size: 2.5rem;
-	color: #fff;
+	color: var(--color1);
 }
 
 .home h1 {
 	font-size: 5rem;
-	color: #fff;
+	color: var(--color1);
 }
 
 .home h1 span {
-	color: var(--blue);
+	color: var(--accent);
 }
 
 .home p {
 	font-size: 2rem;
-	color: #eee;
+	color: var(--color2);
 	padding: 1rem 0;
 }
 
@@ -191,13 +196,13 @@ header .navbar ul li a:hover {
 
 .about .row .info h3 {
 	font-size: 2rem;
-	color: var(--blue);
+	color: var(--accent);
 	padding: 1rem 0;
 	font-weight: normal;
 }
 
 .about .row .info h3 span {
-	color: #eee;
+	color: var(--color2);
 	padding: 0 0.5rem;
 }
 
@@ -210,7 +215,7 @@ header .navbar ul li a:hover {
 
 .about .row .counter .box {
 	width: 20rem;
-	background: #222;
+	background: var(--background2);
 	text-align: center;
 	padding: 2rem;
 	margin: 2rem;
@@ -218,12 +223,12 @@ header .navbar ul li a:hover {
 
 .about .row .counter .box span {
 	font-size: 4rem;
-	color: var(--blue);
+	color: var(--accent);
 }
 
 .about .row .counter .box h3 {
 	font-size: 2rem;
-	color: #fff;
+	color: var(--color1);
 }
 
 .skills .box-container {
@@ -239,27 +244,27 @@ header .navbar ul li a:hover {
 	width: 27rem;
 	margin: 4rem 1rem;
 	padding-left: 4rem;
-	border-left: 0.3rem solid #fff;
+	border-left: 0.3rem solid var(--color1);
 	position: relative;
 }
 
 .skills .box-container .box span {
 	font-size: 1.3rem;
-	background: #222;
-	color: #fff;
+	background: var(--background2);
+	color: var(--color1);
 	border-radius: 5rem;
 	padding: 0.5rem 2.5rem;
 }
 
 .skills .box-container .box h3 {
 	font-size: 2rem;
-	color: #fff;
+	color: var(--color1);
 	padding-top: 1.5rem;
 }
 
 .skills .box-container .box p {
 	font-size: 1.4rem;
-	color: #eee;
+	color: var(--color2);
 	padding: 1rem 0;
 }
 
@@ -276,8 +281,8 @@ header .navbar ul li a:hover {
 	line-height: 5rem;
 	text-align: center;
 	font-size: 2rem;
-	color: #fff;
-	background: var(--blue);
+	color: var(--color1);
+	background: var(--accent);
 }
 
 .skills .box-container .box i img {
@@ -326,7 +331,7 @@ header .navbar ul li a:hover {
 
 .contact .row .content .title {
 	text-transform: uppercase;
-	color: #fff;
+	color: var(--color1);
 	font-size: 3rem;
 	padding-bottom: 2rem;
 }
@@ -335,19 +340,19 @@ header .navbar ul li a:hover {
 	display: flex;
 	align-items: center;
 	font-size: 2rem;
-	color: #eee;
+	color: var(--color2);
 	padding: 1rem 0;
 	font-weight: normal;
 }
 
 .contact .row .content .info h3 i {
 	padding-right: 2rem;
-	color: var(--blue);
+	color: var(--accent);
 }
 
 .contact .row .content .info h3 a:visited {
 	text-decoration: none;
-	color: #eee;
+	color: var(--color2);
 }
 
 .top {
@@ -357,7 +362,7 @@ header .navbar ul li a:hover {
 	z-index: 100;
 	display: none;
 	font-size: 3rem;
-	color: #eee;
+	color: var(--color2);
 }
 
 /* media queries  */
@@ -374,7 +379,7 @@ header .navbar ul li a:hover {
 
 @media (max-width: 991px) {
 	header {
-		left: -120%;
+		right: -120%;
 	}
 
 	#menu {
@@ -382,7 +387,7 @@ header .navbar ul li a:hover {
 	}
 
 	header.toggle {
-		left: 0%;
+		right: 0%;
 	}
 
 	body {
