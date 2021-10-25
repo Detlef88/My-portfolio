@@ -1,10 +1,17 @@
 :root {
 	--accent: #00bfff;
-	--background1: #111;
-	--background2: #222;
-	--background3: #333;
-	--color1: #fff;
-	--color2: #eee;
+
+	--background1-light: #fff;
+	--background2-light: #eee;
+	--background3-light: #ddd;
+	--color1-light: #111;
+	--color2-light: #222;
+
+	--background1-dark: #111;
+	--background2-dark: #222;
+	--background3-dark: #333;
+	--color1-dark: #fff;
+	--color2-dark: #eee;
 }
 
 * {
@@ -424,5 +431,25 @@ header .navbar ul li a:hover {
 
 	.contact .row form {
 		margin: 3rem 0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background1: var(--background1-dark);
+		--background2: var(--background2-dark);
+		--background3: var(--background3-dark);
+		--color1: var(--color1-dark);
+		--color2: var(--color2-dark);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--background1: var(--background1-light);
+		--background2: var(--background2-light);
+		--background3: var(--background3-light);
+		--color1: var(--color1-light);
+		--color2: var(--color2-light);
 	}
 }
