@@ -1,5 +1,5 @@
 :root {
-	--accent: #00bfff;
+	--accent: #33ccff;
 
 	--background1-light: #fff;
 	--background2-light: #eee;
@@ -12,6 +12,42 @@
 	--background3-dark: #333;
 	--color1-dark: #fff;
 	--color2-dark: #eee;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background1: var(--background1-dark);
+		--background2: var(--background2-dark);
+		--background3: var(--background3-dark);
+		--color1: var(--color1-dark);
+		--color2: var(--color2-dark);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--background1: var(--background1-light);
+		--background2: var(--background2-light);
+		--background3: var(--background3-light);
+		--color1: var(--color1-light);
+		--color2: var(--color2-light);
+	}
+}
+
+[color-scheme="dark"] {
+	--background1: var(--background1-dark);
+	--background2: var(--background2-dark);
+	--background3: var(--background3-dark);
+	--color1: var(--color1-dark);
+	--color2: var(--color2-dark);
+}
+
+[color-scheme="light"] {
+	--background1: var(--background1-light);
+	--background2: var(--background2-light);
+	--background3: var(--background3-light);
+	--color1: var(--color1-light);
+	--color2: var(--color2-light);
 }
 
 * {
@@ -56,25 +92,6 @@ body {
 section {
 	min-height: 100vh;
 	padding: 1rem;
-}
-
-.btn {
-	padding: 0.7rem 3rem;
-	background: var(--background3);
-	color: var(--color1);
-	cursor: pointer;
-	margin-top: 1rem;
-	font-size: 2rem;
-	border-radius: 5rem;
-}
-
-.btn i {
-	padding: 0 0.5rem;
-	font-size: 1.8rem;
-}
-
-.btn:hover {
-	background: var(--accent);
 }
 
 .heading {
@@ -144,6 +161,36 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover {
+	background: var(--accent);
+}
+
+header .color-theme {
+	display: flex;
+	align-items: center;
+}
+
+header .color-theme button {
+	height: 4rem;
+	width: 4rem;
+	margin: 0 0.5rem;
+	background: var(--background3);
+	cursor: pointer;
+	border-radius: 5rem;
+}
+
+header .color-theme button i {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: var(--color1);
+	font-size: 2.5rem;
+}
+
+header .color-theme .red i {
+	color: red;
+}
+
+header .color-theme .btn:hover {
 	background: var(--accent);
 }
 
@@ -372,8 +419,6 @@ header .navbar ul li a:hover {
 	color: var(--color2);
 }
 
-/* media queries  */
-
 @media (max-width: 1200px) {
 	html {
 		font-size: 55%;
@@ -431,25 +476,5 @@ header .navbar ul li a:hover {
 
 	.contact .row form {
 		margin: 3rem 0;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background1: var(--background1-dark);
-		--background2: var(--background2-dark);
-		--background3: var(--background3-dark);
-		--color1: var(--color1-dark);
-		--color2: var(--color2-dark);
-	}
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--background1: var(--background1-light);
-		--background2: var(--background2-light);
-		--background3: var(--background3-light);
-		--color1: var(--color1-light);
-		--color2: var(--color2-light);
 	}
 }
