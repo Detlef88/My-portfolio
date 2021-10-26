@@ -18,7 +18,7 @@ $(document).ready(function(){
       scrollTop : $($(this).attr('href')).offset().top,
     }, 500, 'linear');
   });
-  var colors = ["#33CCFF", "#4933FF", "#F833FF", "#FF3357", "#FFBD33", "#92FF33", "#33FF83"];
+  var colors = ["#4933FF", "#F833FF", "#FF3357", "#FFBD33", "#92FF33", "#33CCFF", "#33FF83"];
   var i = 0;
   $(".color").click(function() {
     if (i < colors.length) {
