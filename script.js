@@ -19,7 +19,7 @@ $(document).ready(function(){
     }, 500, 'linear');
   });
   var colors = ["#4933FF", "#F833FF", "#FF3357", "#FFBD33", "#92FF33", "#33CCFF", "#33FF83"];
-  var accentColor = localStorage.getItem("background") ? localStorage.getItem("style") : 0;
+  var accentColor = localStorage.getItem("style") ? localStorage.getItem("style") : 0;
   $(".color").click(function() {
     if (accentColor < colors.length) {
     $(":root").css("--accent", colors[accentColor]);
