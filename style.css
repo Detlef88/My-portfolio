@@ -1,5 +1,6 @@
 :root {
 	--accent: #33ccff;
+	--next-accent: #33FF83;
 
 	--background1-light: #fff;
 	--background2-light: #eee;
@@ -186,12 +187,12 @@ header .color-theme button i {
 	font-size: 2.5rem;
 }
 
-header .color-theme .red i {
-	color: red;
+header .color-theme .color i {
+	color: var(--accent)
 }
 
-header .color-theme .btn:hover {
-	background: var(--accent);
+header .color-theme .color i:hover {
+	color: var(--next-accent);
 }
 
 #menu {

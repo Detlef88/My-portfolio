@@ -19,14 +19,16 @@ $(document).ready(function(){
     }, 500, 'linear');
   });
   var colors = ["#4933FF", "#F833FF", "#FF3357", "#FFBD33", "#92FF33", "#33CCFF", "#33FF83"];
-  var i = 0;
+  var accentColor = localStorage.getItem("background") ? localStorage.getItem("style") : 0;
   $(".color").click(function() {
-    if (i < colors.length) {
-    $(":root").css("--accent", colors[i]);
-      i++;
-        if (i == 7) {
-          i = 0;
-        }
+    if (accentColor < colors.length) {
+    $(":root").css("--accent", colors[accentColor]);
+      localStorage.setItem('style', colors[accentColor]);
+        accentColor++;
+         if (accentColor == 7) {
+            accentColor = 0;
+          }
+          $(":root").css("--next-accent", colors[accentColor]);
     }
   });
 });
