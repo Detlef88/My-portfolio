@@ -18,20 +18,34 @@ $(document).ready(function(){
       scrollTop : $($(this).attr('href')).offset().top,
     }, 500, 'linear');
   });
-  var colors = ["#4933FF", "#F833FF", "#FF3357", "#FFBD33", "#92FF33", "#33CCFF", "#33FF83"];
-  var accentColor = localStorage.getItem("style") ? localStorage.getItem("style") : 0;
   $(".color").click(function() {
-    if (accentColor < colors.length) {
-    $(":root").css("--accent", colors[accentColor]);
-      localStorage.setItem('style', colors[accentColor]);
-        accentColor++;
-         if (accentColor == 7) {
-            accentColor = 0;
-          }
-          $(":root").css("--next-accent", colors[accentColor]);
-    }
+    let style = getCurrentStyle();
+      style++;
+      if (style == 7) {
+        style = 0;
+      };
+      localStorage.setItem('style', `${style}`);
+      loadStyle(style);
   });
 });
+
+var colors = ["#4933FF", "#F833FF", "#FF3357", "#FFBD33", "#92FF33", "#33CCFF", "#33FF83"];
+
+function getCurrentStyle(){
+  const style = localStorage.getItem('style') ? localStorage.getItem('style') : 0;
+  return style;
+};
+
+function loadStyle(style){
+  $(":root").css("--accent", colors[style]);
+    if (style < colors.length) {
+      style++;
+        if (style == 7) {
+          style = 0;
+        };
+        $(":root").css("--next-accent", colors[style]);
+      };
+};
 
 const themeBtn = document.querySelector('.theme');
 
@@ -69,4 +83,5 @@ themeBtn.addEventListener('click', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   loadTheme(getCurrentTheme());
-})
+  loadStyle(getCurrentStyle());
+});
